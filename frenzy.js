@@ -11,7 +11,7 @@ links.addEventListener('click', function (el) {
      if(!el.target.classList.contains('nav-li')) return
     if (el.target.classList.contains('nav-li')) {
       const id = el.target.getAttribute('href');
-      console.log(id);
+ 
       document.querySelector(id).scrollIntoView({ behavior: 'smooth' });
     }
 });
@@ -19,7 +19,7 @@ links.addEventListener('click', function (el) {
 dishlinks.addEventListener(`click`, function(e){
     e.preventDefault()
     const clicked = e.target.closest(`.dish-link`);
-    console.log(clicked);
+  
     if(!clicked) return
     dishlink.forEach(l=> l.classList.remove(`dish-active`))
   dishta.forEach(l => l.classList.remove(`dish-cards-active`))
